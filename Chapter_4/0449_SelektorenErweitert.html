@@ -1,0 +1,40 @@
+<!Doctype <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Selektoren erweitert</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        h1,p{
+            color:blue;
+        }
+        div p{
+            color: red;
+        }
+        div + p{
+            color: green;
+        }
+        div > p{
+            color:gold;
+        }
+        #rot{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Selektoren gruppieren</h1>
+    <div>
+        <h2>Überschrift 2</h2>
+        Text direkt im div
+        <p>Absatz 1</p>
+    </div>
+    <p>Absatz 2</p>
+    <h2>Überschrift <span id="rot">die nicht</span> betroffen ist</h2>
+    <div>
+        <span>
+            <p>Absatz 3</p>
+        </span>
+    </div>
+</body>
+</html>
