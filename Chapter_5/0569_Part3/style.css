@@ -1,0 +1,20 @@
+body{
+    background-color: rgb(200, 200, 200);
+}
+.container{
+    background-color: white;
+    border: 1px solid rgb(100, 100, 100);
+    padding: 10px;
+    width: 400px;
+    /*margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto; Verkürzte Schreibweise darunter*/
+    /*margin: 25px auto 25px auto; noch kürzer darunter*/
+    margin: 25px auto; /* erster Wert beschreibt top und bottom, zweiter Wert beschreibt right und left*/
+}
+.container img{
+    width: 300px;
+    display: block;
+    margin: 0px auto;
+}
