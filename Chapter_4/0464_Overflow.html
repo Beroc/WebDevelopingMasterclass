@@ -1,0 +1,34 @@
+<!Doctype <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Overflow</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        div{
+            background-color: #eee;
+            width: 200px;
+            height: 60px;
+            border: 1px dotted black;
+            overflow: auto /* visible / hidden / scroll */
+        }
+    </style>
+</head>
+<body>
+    <h2>CSS Overflow</h2>
+    <p>Standardmäßig ist der Überlauf sichtbar, d.h. er wird nicht abgeschnitten und wird außerhalb des Rahmens dargestellt.</p>
+    <p>Der "auto" Wert ist ähnlichwie beim Scrollen, nur dass er bei Bedarf Scrollbars hinzufügt.</p>
+    <p>Mit dem "hidden" Wert wird der Überlauf beschnitten und der Rest des Inhalts ausgeblendet</p>
+    <p>Wenn Sie den Wert für den Überlauf so einstellen, dass er gescrollt wird, wird der Überlauf abgeschnitten 
+        und eine Bildlaufleiste zum Scrollen innerhalb des Rahmens hinzugefügt. 
+        Beachten Sie, dass dadurch sowohl horizontal als auch vertikal eine Scrollbar hinzugefügt wird 
+        (auch wenn Sie diese nicht benötigen)
+    </p>
+    <div>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+         sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem 
+         ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+         magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, 
+         no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    </div>
+</body>
+</html>

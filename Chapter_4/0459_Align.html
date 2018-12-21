@@ -1,0 +1,37 @@
+<!Doctype <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Align</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .zentriert{
+            margin: auto;
+            border: 3px solid brown;
+            width: 60%;
+        }
+        .zentrierterText{
+            text-align: center;
+            border: 5px solid blue;
+        }
+        img{
+            width: 40%;
+            display: block; /* weil das Bild nicht in einer neuen Zeile war hatte margin: auto keine Auswirkungen*/
+         /* margin: auto;  Selbe Auswirkung wie die nächsten zwei Zeilen*/
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Align</h1>
+    <p> Um ein Blockelement horizontal zu zentrieren, wie z.B. ein div, verwendet man margin: auto;</p>
+    <div class="zentriert">
+        <p><b>Hinweis: </b>Verwendung von margin:auto funktioniert im IE8 nicht, es sei denn, es wird ein !DOCTYPE deklariert.</p>
+    </div>
+    <div class="zentrierterText">
+        <p>zentrierter Text</p>
+    </div>
+    <img src="Pictures/bild.jpg">
+</body>
+</html>
