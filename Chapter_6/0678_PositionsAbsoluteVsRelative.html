@@ -1,0 +1,35 @@
+<!Doctype <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Positions: absolute vs. relative</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .box{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            position: relative;
+        }
+        .author{
+            display: block;
+            /*margin-top: 280px;
+            margin-left: 180px;
+            font-size: 20px; nicht praktikabel 
+            um ein Element nach unten rechts zu verschieben 
+            falls sich z.B. die font-size verändert */
+            position: absolute; /*Elternelement (hier: div) braucht position: relative; 
+                                um dem Kindelement (hier: span) position: absolute; zuweisen zu dürfen*/
+            right: 0px;
+            bottom: 0px;
+            /* Hat die Klasse box kein position: relative so wird das span Element 
+            auf 0px 0px des bodys gesetzt also ganz unten rechts auf dem Bildschrim*/
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <span class="author">&copy;Max Mustermann</span>
+    </div>
+</body>
+</html>
