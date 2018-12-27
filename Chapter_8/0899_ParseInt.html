@@ -1,0 +1,28 @@
+<!Doctype <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Funktionen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    </style>
+</head>
+<body>
+    <h1 id="top">Hallo ...</h1>
+    <input type="number" id="zahl"/>
+    <button type="button" id="button">Rechnen</button>
+    <script>
+       document.getElementById("button").onclick = function(){
+           var zahl1 = document.getElementById("zahl").value;
+           var zahl1Umgewandelt = parseInt(zahl1);       
+           var textKommazahl = "13.33";
+           var kommaZahl = parseFloat(textKommazahl);   
+           console.log(15 + zahl1);
+           console.log(15+zahl1Umgewandelt);
+           console.log(15 + textKommazahl);
+           console.log(15 + kommaZahl);
+           console.log(typeof(15 + kommaZahl));
+       }
+    </script>
+</body>
+</html>

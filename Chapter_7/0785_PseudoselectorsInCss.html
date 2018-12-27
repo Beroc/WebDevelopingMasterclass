@@ -1,0 +1,70 @@
+<!Doctype <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Pseudoselectors in CSS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        table{
+            border: 1px solid grey;
+            border-collapse: collapse; /* Rahmen wird nur einmal dargestellt für jede Zeile */
+        }
+        td{
+            border: 1px solid grey;
+        }
+        /*td:first-child{ Nur das erste td Element einer Zeile bekommt einen Hintergrund --> die erste Spalte
+            background-color: rgb(230, 230, 230);
+        }
+        td:last-child{ Nur das letzte td Element einer Zeile bekommt einen Hintergrund --> die letzte Spalte
+            background-color: rgb(230, 210, 210);
+        }
+        td:nth-child(2){ Nur das 2. td Element einer Zeile bekommt einen Hintergrund --> die 2. Spalte
+            background-color: rgb(210, 210, 240);
+        }*/
+        /*tr:nth-child(2) td,
+        tr:nth-child(4) td,
+        tr:nth-child(6) td{
+            background-color: rgb(220, 220, 220);
+        }*/
+        tr:nth-child(2n){ /* Jede 2. Zeile wird eingefärbt. Beginnt bei n= 0, 1, 2, ..*/
+            background-color: rgb(220, 220, 220);
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tbody> <!--tbody ist der Inhaltsbereich der Tabelle-->
+            <tr>
+                <td>Zelle 1</td>
+                <td>Zelle 2</td>
+                <td>Zelle 3</td>
+            </tr>
+            <tr>
+                <td>Zelle 1</td>
+                <td>Zelle 2</td>
+                <td>Zelle 3</td>
+            </tr>
+            <tr>
+                <td>Zelle 1</td>
+                <td>Zelle 2</td>
+                <td>Zelle 3</td>
+            </tr>
+            <tr>
+                <td>Zelle 1</td>
+                <td>Zelle 2</td>
+                <td>Zelle 3</td>
+            </tr>
+            <tr>
+                <td>Zelle 1</td>
+                <td>Zelle 2</td>
+                <td>Zelle 3</td>
+            </tr>
+            <tr>
+                <td>Zelle 1</td>
+                <td>Zelle 2</td>
+                <td>Zelle 3</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

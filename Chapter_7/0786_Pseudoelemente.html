@@ -1,0 +1,21 @@
+<!Doctype <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Pseudoelemente</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        h1::before{ /* Pseudoelement: HTML-Element, welches durch CSS erzeugt wird und auf der erzeugten Website als HTML-Element aufgeführt wird */
+            content: "-";
+            background-color: red;
+        }
+        h1::after{ /* Pseudoelement */
+            content: "!";
+            background-color: greenyellow; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Überschrift</h1>
+</body>
+</html>

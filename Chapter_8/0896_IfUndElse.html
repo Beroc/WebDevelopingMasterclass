@@ -1,0 +1,39 @@
+<!Doctype <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>If und Else If</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        
+    </style>
+</head>
+<body>
+    <h1 id="top">Hallo ...</h1>
+    <input type="text" name="name" id="name"/>
+    <input type="number" name="alter" id="alter"/>
+    <button type="button" id="mybutton">Übermitteln</button>
+    <script>
+
+        document.getElementById("mybutton").onclick = function(){
+            var name = document.getElementById("name").value;
+            var alter = document.getElementById("alter").value;
+            var text = "";
+
+            if (alter < 16) {
+                text = "Hallo " + name + " du darfst bis 22 Uhr raus!";        
+            } else if(alter < 18 && alter >= 16){
+                text = "Hallo " + name + " du darfst bis 24 Uhr raus!";
+            } else{
+                text = "Hallo " + name + " du kannst machen was du willst!";
+            }
+            if (name == "Florian Lapolla") {
+                text = "Hallo " + name + " du darfst gar nicht erst raus!";
+            }
+
+            document.getElementById("top").innerHTML = text;
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!Doctype <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Arrays</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    </style>
+</head>
+<body>
+    <h1 id="top">Hallo ...</h1>
+    <script>
+        var zahlenArray = new Array(0,1,2,3,4,5,6,7,8,9);
+        console.log(zahlenArray.length); // Läönge des Arrays wird berechnet
+        var produktNamen = new Array("IPhone 4", "IPhone 5", "IPhone 6", "IPhone 7", "IPhone 8", "IPhone XS");
+        console.log(produktNamen.length);
+        var ausgegliedertesProdukt = produktNamen.pop(); // letztes Element aus dem Array wird gelöscht
+        console.log(ausgegliedertesProdukt);
+        console.log(produktNamen.pop());
+        console.log(produktNamen);
+        produktNamen.push("IPhone XS Max");
+        console.log(produktNamen);
+        var erstesElement = produktNamen.shift(); // erstes Element aus dem Array wird gelöscht
+        console.log(erstesElement);        
+        console.log(produktNamen);
+        produktNamen.unshift("IPhone 3", "IPhone 4"); // Elemente werden an den Anfang des Arrays eingefügt
+        console.log(produktNamen);
+        produktNamen.splice(2,0, "IPhone 4s", "IPhone 5s"); // Am Index 2 werden 0 Elemente gelöscht und die zwei String hinzugefügt
+        console.log(produktNamen);
+        produktNamen.sort(); // Sortierung des Arrays aufsteigend
+        console.log(produktNamen);
+        produktNamen.splice(6,0,"IPhone 6s");
+        console.log(produktNamen);
+        produktNamen.reverse(); // Sortierung des Arrays absteigend
+        console.log(produktNamen);
+        console.log(produktNamen.toString()); // Konvertiert das Array mit all seinen Elementen in einen String 
+        console.log(produktNamen.join(" * ")); // Konvertiert das Array mit all seinen Elementen 
+                                               // in einen String und verbindet die einzelnen Elemente mit einem *
+    </script>
+</body>
+</html>

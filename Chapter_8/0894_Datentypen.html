@@ -1,0 +1,35 @@
+<!Doctype <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Unsere Erste Interaktion via Click</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        button{
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="top">Schüler: 0</h1>
+    <button type="button" id="mybutton">Erhöhen</button>
+    <br>
+    <button type="button" id="myresetbutton">Zähler zurücksetzen!</button>
+    <script>
+        var name = "Flo";
+        var nachname;
+        var anzahl = 0;
+
+        document.getElementById("mybutton").onclick = function(){
+            // anzahl = anzahl +1;
+            // anzahl ++;  inkrementieren
+            anzahl += 1;  // kurze Schreibweise
+            document.getElementById("top").innerHTML = "Schüler: " + anzahl;
+        }
+        document.getElementById("myresetbutton").onclick = function(){
+            anzahl = 0;
+            document.getElementById("top").innerHTML = "Schüler: " + anzahl;
+        }
+    </script>
+</body>
+</html>
