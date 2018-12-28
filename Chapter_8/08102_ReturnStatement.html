@@ -11,31 +11,35 @@
     <h1 id="top">Hallo ...</h1>
     <input type="number" id="zahl1"/>
     <input type="number" id="zahl2"/>
+    <input type="text" id="name" placeholder="Dein Name"/>
     <button type="button" id="button" onclick=hochRechnen()>Rechnen</button>
     <script>
 
         document.getElementById("button").onclick = function(){
             var zahl1 = document.getElementById("zahl1").value;
             var zahl2 = document.getElementById("zahl2").value;
-            addieren(zahl1 , zahl2);
-            hochRechnen(zahl1);
-            hochRechnen(zahl2);
+            var resultat = addieren(zahl1 , zahl2);
+            console.log(resultat);
+            console.log(returnBeispiel());
+            var gruss = returnName(document.getElementById("name").value);
+            console.log(gruss);
+            
+        }
+
+        function returnBeispiel(){
+            return "Ich bin ein Return";
+        }
+
+        function returnName(name){
+            return "Hallo " + name;
         }
 
         function addieren(parameter1, parameter2){
             parameter1 = parseInt(parameter1);
             parameter2 = parseInt(parameter2);
-            ergebnis = parameter1 + parameter2;
-            console.log(parameter1 + parameter2);
-            document.getElementById("top").innerHTML = "Ergebnis ist: " + ergebnis;
+            var ergebnis = parameter1 + parameter2;
+            return ergebnis;
         }
-
-       function hochRechnen(zahl){
-        var zahl = document.getElementById("zahl1").value;
-        console.log("Quadriert: " + zahl* zahl);
-        console.log("Hoch drei: " + zahl*zahl*zahl);
-        console.log("Hoch vier: " + zahl*zahl*zahl*zahl);
-       }
 
     </script>
 </body>

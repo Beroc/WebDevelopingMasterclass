@@ -1,0 +1,36 @@
+<!Doctype <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Lokale vs. Globale Variablen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    </style>
+</head>
+<body>
+    <h1 id="top">Hallo ...</h1>
+    <script>
+
+        var zahl3 = 5; // globale Variable --> im gesamten script Tag sichtbar
+
+        function addieren(parameter1, parameter2){
+            parameter1 = parseInt(parameter1);
+            parameter2 = parseInt(parameter2);
+            var ergebnis = parameter1 + parameter2; // lokale Variable nur innerhalb der Funktion ab Zeile 20 sichtbar
+            console.log(zahl3);
+            return ergebnis;
+        }
+        
+        addieren(13,37);
+        hochRechnen(3);
+
+        function hochRechnen(zahl){
+            zahl = zahl3;
+            console.log("Quadriert: " + zahl* zahl);
+            console.log("Hoch drei: " + zahl*zahl*zahl);
+            console.log("Hoch vier: " + zahl*zahl*zahl*zahl);
+        }
+
+    </script>
+</body>
+</html>

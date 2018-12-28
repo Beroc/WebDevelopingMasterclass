@@ -1,0 +1,31 @@
+<!Doctype <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Lokale vs. Globale Variablen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    </style>
+</head>
+<body>
+    <h1 id="top">Hallo ...</h1>
+    <script>
+        for(i = 10; i >= 0; i--){
+            document.write("Zählerwert ist: " + i + "<br>");
+        }
+        for(zaehler = 0; zaehler < 10; zaehler++){
+            document.write("Zählerwert ist: " + zaehler + "<br>");
+        }
+        
+        var freunde = ["Frank", "Michi", "Sissy", "Maria"];
+        var len = freunde.length;
+        var text = "";
+        for(i = 0; i < len; i++){
+            // text += freunde[i] + "<br>";
+            freunde[i] = freunde[i] + " buddy";
+            text += freunde[i] + "<br>";
+        }
+        document.write(text);
+    </script>
+</body>
+</html>
