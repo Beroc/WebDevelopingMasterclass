@@ -1,0 +1,39 @@
+<!doctype <!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8" />
+    <title>Verblassen von Inhalten</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../lib/jquery-3.3.1.min.js"></script> <!-- Einbinden der lokal abgelegten jQuery lib -->
+    <style>
+        #viereck{
+            width: 200px;
+            height: 200px;
+            background-color: aquamarine;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <p id="text">Endlich mal jQuery</p>
+    <button id="toggle" type="button">Verblassen</button>
+    <div id="viereck"></div>
+    <script>
+        var aktiv = true;
+        $("#toggle").click(function(){
+            if(aktiv){
+                $("#viereck").fadeOut(2000, function(){ // fadeOut() zum Verblassen innerhalb von 2 Sekunden
+                    aktiv = false;
+                    $("#toggle").text("Anzeigen"); // Text des Buttons wird geändert nach dem Verblasssen in "Anzeigen"
+                });
+                
+            } else{
+                $("#viereck").fadeIn(2000, function(){ // fadeIn() zum Anzeigen innerhalb von 2 Sekunden
+                    aktiv = true;
+                    $("#toggle").text("Verblassen"); // Text des Buttons wird geändert nach dem Anzeigen in "Verblassen"
+                });
+            }    
+        });
+    </script>
+</body>
+</html>

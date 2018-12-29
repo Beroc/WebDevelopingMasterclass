@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
     <meta charset="utf-8" />
-    <title>Erster jQuery Code</title>
+    <title>Style ändern mit jQuery</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="../lib/jquery-3.3.1.min.js"></script> <!-- Einbinden der lokal abgelegten jQuery lib -->
     <style>
@@ -22,15 +22,16 @@
         $('#viereck').click(function(){
             alert($("#text").text());
         }); // wird das viereck geklickt, wird der alert mit dem Text aus der id text angezeigt
-        $("#text").click(function(){
-            $("#text").text("Text hat sich verändert");
-        }); // wird der Text mit der id text angeklick, ändert sich dieser in Text hat sich verändert
-        $("#text").click(function(){
-            $("p").text("Alle p Tags haben sich verändert")
-        }); // Alle p Tags erhalten einen neuen Text, wenn der Text mit der id text angeklickt wird
-        $("p").click(function(){
-            $("p").text("Alle p Tags haben sich verändert durch das Anklicken eines p Tags")
-        }); // Alle p Tags erhalten einen neuen Text, wenn ein p Tag angeklickt wird
+        
+        $("#viereck").hover(function(){
+            $("#viereck").css("width" , "50px");
+            $("#viereck").css("background-color", "red");
+        }); // Verändern des Stylings mithilfe der css()-Methode mit Parametern wie sie in CSS verwendet werden
+
+        $("p").hover(function(){
+            $("#viereck").css("width", "200px");
+            $("#viereck").css("background-color", "aquamarine");
+        });
     </script>
 </body>
 </html>
