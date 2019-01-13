@@ -1,0 +1,32 @@
+<!Doctype <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Erste Schritte mit Flexbox</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <style>
+        .container{
+            display: flex; /* Elemente werden bei Verwendung von display:flex standardmäßig nebeneinader gesetzt*/
+        }
+        .box{
+            /*width: auto; wird ignoriert, wenn disply: flex; gestezt wird*/
+            flex: 1 1 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            Hallo Welt
+        </div>
+        <div class="box">
+            Hallo Welt
+        </div>
+        <div class="box">
+            Hallo Welt
+        </div>
+    </div>
+    
+</body>
+</html>

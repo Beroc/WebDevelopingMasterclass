@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
     <meta charset="utf-8" />
-    <title>Animationen</title>
+    <title>Chaining</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="../lib/jquery-3.3.1.min.js"></script> <!-- Einbinden der lokal abgelegten jQuery lib -->
     <style>
@@ -19,7 +19,11 @@
     <script>
         $("#viereck").click(function(){
             $(this).animate({width: "400px", heigth: "400px", marginLeft: "50px", marginTop: "50px", borderRadius: "50%"}, 1000, function(){
-                $(this).css("background-color" , "lightgreen");
+                $(this).css("background-color" , "lightgreen").fadeOut(2000, function(){
+                    $(this).fadeIn(2000, function(){
+                        $(this).css("background-color", "lightblue");
+                    });
+                });
             });
         });
     </script>

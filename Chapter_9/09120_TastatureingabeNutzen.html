@@ -1,0 +1,39 @@
+<!Doctype <!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8" />
+    <title>Tastatureingabe nutzen - Listen und remove</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../lib/jquery-3.3.1.min.js"></script> <!-- Einbinden der lokal abgelegten jQuery lib -->
+    <style>
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text" id="newItem">
+        <ul class="list">
+            <li>Erstes Element</li>
+            <li>Element 2</li>
+            <li>Element 3</li>
+            <li>Element 4</li>
+            <li>Element 5</li>
+            <li>Letztes Element</li>
+        </ul>
+    </div>
+    <script> 
+        $("#newItem").keyup(function(e){ // Wenn die Taste losgelassen wird wird das Event gestartet. keydown bedeutet, wenn die Taste gedrückt wird wird das Event ausgeführt
+            var code = e.which; 
+            console.log(code);
+            if(code == 13){ // 13 steht für die Enter Taste
+                $("ul.list").append("<li>" + e.target.value + "</li>"); // Aus dem Event wird das Ziel geholt, also #newItem, und davon den Wert mit value
+                // $("ul.list").append("<li>" + $("newItem").val() + "</li>"); macht dasselbe wie obendrüber
+                $("#newItem").val(""); // Leeren des Input-Feld damit es nicht immer gelöscht werden muss
+                e.preventDefault(); // Verhindert das Standardverhalten des Browser z.B. das bei Drücken der Enter Taste der Browser neu geladen wird
+            }
+        });
+        $("li").click(function(){
+            $(this).remove(); // Das Listenelement, welches angeklickt wird, wird gelöscht, weil this sich auf das Objekt selbst bezieht
+        });
+    </script>
+</body>
+</html>

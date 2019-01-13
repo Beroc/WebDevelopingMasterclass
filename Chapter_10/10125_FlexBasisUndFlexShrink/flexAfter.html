@@ -1,0 +1,42 @@
+<!Doctype <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Flex-Basis und Flex-Grow</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <style>
+        .container{
+            display: flex; /* Elemente werden bei Verwendung von display:flex standardmäßig nebeneinader gesetzt*/
+        }
+        .box{
+            /*width: auto; wird ignoriert, wenn disply: flex; gestezt wird*/
+            /* egal wie klein die Box durch die Fenstergröße eingeschränkt wird, das Padding bleibt immer erhalten*/
+            flex-grow: 1; /* 1. Wert der flex Kurzschreibweise*/ 
+            flex-shrink: 1; /* 2. Wert der flex Kurzschreibweise*/ 
+            flex-basis: 500px; /* 3. Wert der flex Kurzschreibweise*/ 
+            /*Alle Boxen haben zu Beginn eine Breite von 0px*/
+        }
+        .box-first{
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 50px; /* 1. Box beginnt vor dem growen mir 50px mehr. 
+            Hier: 350 px werden dann auf alle 3 Boxen aufgeteilt. Wenn flex-basis 0px dann werden 400px auf alle 3 Boxen aufgeteilt*/
+            overflow: hidden; /* Text darf abgeschnitten werden, wenn die Box zu klein für den Text ist*/
+        } 
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box-first">
+            Hallo Welt
+        </div>
+        <div class="box">
+            Hallo Welt
+        </div>
+        <div class="box">
+            Hallo Welt
+        </div>
+    </div>  
+</body>
+</html>

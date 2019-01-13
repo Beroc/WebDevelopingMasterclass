@@ -1,0 +1,33 @@
+<!Doctype <!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8" />
+    <title>Selektoren in jQuery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../lib/jquery-3.3.1.min.js"></script> <!-- Einbinden der lokal abgelegten jQuery lib -->
+    <style>
+    </style>
+</head>
+<body>
+    <div>
+        <ul id="list">
+            <li>Erstes Element</li>
+            <li>Element 2</li>
+            <li>Element 3</li>
+            <li>Element 4</li>
+            <li>Element 5</li>
+            <li>Letztes Element</li>
+        </ul>
+    </div>
+    <script> // Wird keine id vergeben sondern eine Klasse muss die # durch einen . ersetzt werden um angesprochen werden zu können
+        $("ul#list li:first").css("color", "violet"); //Veränderung der Color des ersten Elementes der unordered list mit der id #list
+        $("ul#list li:even").css("background-color", "lightblue"); // Hintergrundfarbe jedes geraden Elementes der ul mit der id #first wird verändert. Erstes Element ist das 0te Element
+        $("ul#list li:odd").css("background-color", "lightgrey"); // Hintergrundfarbe jedes ungeraden Elementes der ul mit der id #first wird verändert. Erstes Element ist das 0te Element
+        $("ul#list li:last").css("color", "chocolate"); // Hintergrundfarbe des letzten Elementes der ul mit der id #first wird verändert.
+        $("ul#list li:nth-child(3n)").css("font-size", "150%"); // Die Schriftgröße jedes 3. Elements wird verändert
+        $("ul#list li:nth-child(3n)").hover(function(){
+            $("ul").hide(); // Wird über das 3. Element gehovert verschwindet die ganze Liste
+        });
+    </script>
+</body>
+</html>

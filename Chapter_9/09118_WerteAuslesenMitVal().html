@@ -1,0 +1,26 @@
+<!Doctype <!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8" />
+    <title>Werte auslesen mit der val()-jQuery Methode</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../lib/jquery-3.3.1.min.js"></script> <!-- Einbinden der lokal abgelegten jQuery lib -->
+    <style>
+    </style>
+</head>
+<body>
+    <form action="">
+        <input type="text" name="name" id="name">
+        <input type="submit" id="submit" name="submit">
+    </form>
+    <h1 id="welcome">Hallo...</h1>
+    <script>
+        $("#submit").click(function(e){ // e ist der Variablennmae des Events
+            e.preventDefault(); // Inhalt der in den Submit eingetragen wird wird nach dem Senden nicht aus dem Feld gelöscht
+            //alert($("#name").val());
+            $("#welcome").text("Hallo " + $("#name").val()); // Auslesen des Werts aus dem Element mit der id #name 
+                                                             // und setzen eines neuen Textes der Überschrift
+        });
+    </script>
+</body>
+</html>

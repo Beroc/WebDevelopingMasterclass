@@ -1,0 +1,43 @@
+<!Doctype <!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery Methods</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../lib/jquery-3.3.1.min.js"></script> <!-- Einbinden der lokal abgelegten jQuery lib -->
+    <style>
+    </style>
+</head>
+<body>
+    <button type="button" id="button1">DOM ändern</button>
+    <div id="div1">
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt</p>
+        <p>Alter Text</p>
+        <p id="rep">Reproduzierter Text</p>
+    </div>
+    <div id="div2">
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt</p>
+    </div>
+    <script>
+        $(function(){
+            $("#button1").click(function(){
+                $("#div1").append("<p>Neuer Text append</p>"); // hängt HTML-Code an das Ende des divs mit der ID #div1
+                $("#div1").prepend("<p>Neuer Text prepend</p>"); // hängt HTML-Code an den Anfang des divs mit der ID #div1
+                $("#rep").appendTo("#div2"); // zu verschiebender Text an das Ende des divs mit der ID #div2
+                $("#rep").before("<h2>Neue Überschrift vor dem Tag</h2>"); // hängt HTML-Code vor das p Tag mit der ID #rep an
+                $("#rep").after("<h2>Neue Überschrift nach dem Tag</h2>"); // hängt HTML-Code nach dem p Tag mit der ID #rep an
+                $("#rep").hide(); // dient dem Verstecken bestimnmter Elemente
+                $("body").hide(); // dient dem Verstecken bestimnmter Elemente
+            });
+        });
+        /*$(document).ready(function(){
+
+        }); 
+        dasselbe wie 
+        
+        $(function(){
+
+        });*/
+    </script>
+</body>
+</html>
